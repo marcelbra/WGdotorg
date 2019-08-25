@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52D972224D250502180F80AA /* Pods_WGdotorgUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01913D9DA237C218A58852F7 /* Pods_WGdotorgUITests.framework */; };
+		EE0E5F80231330E10061CD00 /* ShoppingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0E5F7F231330E10061CD00 /* ShoppingListCell.swift */; };
+		EE0E5F84231332880061CD00 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0E5F83231332880061CD00 /* ShoppingListTableViewController.swift */; };
 		EE4EE35F23115D080075D5DE /* CreateJoinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EE35E23115D080075D5DE /* CreateJoinGroupViewController.swift */; };
 		EE4EE36323115F1B0075D5DE /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EE36223115F1B0075D5DE /* CreateGroupViewController.swift */; };
 		EE60E6DC230F303400453572 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60E6DB230F303400453572 /* WelcomeViewController.swift */; };
@@ -55,6 +57,8 @@
 		69B8C9DBFAC93F1A81426858 /* Pods-WGdotorgTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGdotorgTests.debug.xcconfig"; path = "Target Support Files/Pods-WGdotorgTests/Pods-WGdotorgTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E2954A8732C9432BD668C82D /* Pods_WGdotorg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGdotorg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40FE249C82C66A2EB013AD9 /* Pods-WGdotorg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGdotorg.release.xcconfig"; path = "Target Support Files/Pods-WGdotorg/Pods-WGdotorg.release.xcconfig"; sourceTree = "<group>"; };
+		EE0E5F7F231330E10061CD00 /* ShoppingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCell.swift; sourceTree = "<group>"; };
+		EE0E5F83231332880061CD00 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 		EE4EE35E23115D080075D5DE /* CreateJoinGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJoinGroupViewController.swift; sourceTree = "<group>"; };
 		EE4EE36223115F1B0075D5DE /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		EE60E6DB230F303400453572 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				EEC00C1D230D46AF00807674 /* LoginViewController.swift */,
 				EEB39261230DB50300ABE09C /* CreateUserViewController.swift */,
 				EEBC8434230D42A1007977E5 /* SecondViewController.swift */,
+				EE0E5F83231332880061CD00 /* ShoppingListTableViewController.swift */,
 				EEBC8436230D42A1007977E5 /* Main.storyboard */,
 				EE60E6DB230F303400453572 /* WelcomeViewController.swift */,
 				EE60E6DD230F546E00453572 /* LoginResult.swift */,
@@ -418,12 +423,14 @@
 				EE4EE35F23115D080075D5DE /* CreateJoinGroupViewController.swift in Sources */,
 				EEC00C1E230D46AF00807674 /* LoginViewController.swift in Sources */,
 				EE60E6DE230F546E00453572 /* LoginResult.swift in Sources */,
+				EE0E5F80231330E10061CD00 /* ShoppingListCell.swift in Sources */,
 				EEB39262230DB50300ABE09C /* CreateUserViewController.swift in Sources */,
 				EEBC8435230D42A1007977E5 /* SecondViewController.swift in Sources */,
 				EE60E6DC230F303400453572 /* WelcomeViewController.swift in Sources */,
 				EEBC8431230D42A1007977E5 /* AppDelegate.swift in Sources */,
 				EE60E6E4230F558C00453572 /* PasswordValidationResult.swift in Sources */,
 				EEBC8433230D42A1007977E5 /* FirstViewController.swift in Sources */,
+				EE0E5F84231332880061CD00 /* ShoppingListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
