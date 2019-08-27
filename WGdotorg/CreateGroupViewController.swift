@@ -15,6 +15,7 @@ class CreateGroupViewController: UIViewController {
     
     @IBOutlet weak var groupNameTextField: UITextField!
     
+    // Go into DB and check if the automatically built uuid really is unique
     func createNewUuidAsync(completionHandler: @escaping (String?) -> ()) {
         var newUuid: String? = UUID().uuidString.components(separatedBy: "-")[0]
         let db = Firestore.firestore()
@@ -66,12 +67,20 @@ class CreateGroupViewController: UIViewController {
                     "name": self.groupNameTextField.text!,
                     "uid": groupUuid
                 ]
-                db.collection("groups").addDocument(data: data)
-                
+
+                db.collection("groups").document(groupUuid).setData(data) { err in
+                    guard err == nil else {
+                        self.errorMessage.text = "Couldn't create group."
+                        return
+                    }
+                }
+
                 // Assign user to group
                 if let currUser = Auth.auth().currentUser {
                     let docRef = db.collection("users").document(currUser.uid)
-                    docRef.updateData([ "group": groupUuid])
+                    docRef.updateData(["group": groupUuid])
+                
+                self.performSegue(withIdentifier: "fromCreateGroupToHome", sender: self)
                 }
             }
         }

@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 class ShoppingListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func addItem(_ sender: UIBarButtonItem) {
-        
+        let db = Firestore.firestore()
+        if let user = Auth.auth().currentUser {
+            
+//            // Get group uid
+//            let ref = db.collection("groups").document("roomA").collection("messages").document("message1")
+
+        }
     }
     
     override func viewDidLoad() {
