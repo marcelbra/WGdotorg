@@ -16,9 +16,8 @@ class ShoppingListViewController: UIViewController {
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         let db = Firestore.firestore()
         if let user = Auth.auth().currentUser {
-            
-//            // Get group uid
-//            let ref = db.collection("groups").document("roomA").collection("messages").document("message1")
+            let groupId = HomeViewController.groupId
+            let groupRef = db.collection("groups").document(groupId).collection("messages").document("message1")
 
         }
     }
