@@ -24,11 +24,11 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func didTapEmailLogin(_ sender: UIButton) {
-        
+
+        // Database connection
+        let db = Firestore.firestore()
+
         // Check if empty
-//        if emailField.text == nil || passwordField.text == nil {
-//            return
-//        }
         guard emailField.text != nil, passwordField.text != nil else {
             return
         }
@@ -43,6 +43,19 @@ class LoginViewController: UIViewController {
                 self.errorMessage.text = "Email/password incorrect"
                 return
             }
+            
+            let userUid = Auth.auth().currentUser?.uid
+            db.collection("users").document(userUid!).getDocument {
+                (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    print("Document data: \(dataDescription)")
+                } else {
+                    print("Document does not exist")
+                }
+            }
+            
+            self.performSegue(withIdentifier: "fromLoginToCreateJoinGroup", sender: self)
 
             self.performSegue(withIdentifier: "fromLoginToHome", sender: self)
         }

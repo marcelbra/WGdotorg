@@ -11,7 +11,7 @@ target 'WGdotorg' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Core'
   pod 'Firebase'
-  
+
   target 'WGdotorgTests' do
     inherit! :search_paths
     # Pods for testing

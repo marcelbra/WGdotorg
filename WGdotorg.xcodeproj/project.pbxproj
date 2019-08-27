@@ -8,17 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		52D972224D250502180F80AA /* Pods_WGdotorgUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01913D9DA237C218A58852F7 /* Pods_WGdotorgUITests.framework */; };
-		EE0E5F80231330E10061CD00 /* ShoppingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0E5F7F231330E10061CD00 /* ShoppingListCell.swift */; };
-		EE0E5F84231332880061CD00 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0E5F83231332880061CD00 /* ShoppingListTableViewController.swift */; };
 		EE4EE35F23115D080075D5DE /* CreateJoinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EE35E23115D080075D5DE /* CreateJoinGroupViewController.swift */; };
 		EE4EE36323115F1B0075D5DE /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EE36223115F1B0075D5DE /* CreateGroupViewController.swift */; };
 		EE60E6DC230F303400453572 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60E6DB230F303400453572 /* WelcomeViewController.swift */; };
 		EE60E6DE230F546E00453572 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60E6DD230F546E00453572 /* LoginResult.swift */; };
-		EE60E6E4230F558C00453572 /* PasswordValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60E6E3230F558C00453572 /* PasswordValidationResult.swift */; };
+		EE897E5C231463BA0048C895 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE897E5B231463BA0048C895 /* ShoppingListViewController.swift */; };
+		EE897E60231464AD0048C895 /* ShoppingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE897E5F231464AD0048C895 /* ShoppingListCell.swift */; };
 		EEB39262230DB50300ABE09C /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB39261230DB50300ABE09C /* CreateUserViewController.swift */; };
 		EEBC8431230D42A1007977E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBC8430230D42A1007977E5 /* AppDelegate.swift */; };
 		EEBC8433230D42A1007977E5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBC8432230D42A1007977E5 /* FirstViewController.swift */; };
-		EEBC8435230D42A1007977E5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBC8434230D42A1007977E5 /* SecondViewController.swift */; };
 		EEBC8438230D42A1007977E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBC8436230D42A1007977E5 /* Main.storyboard */; };
 		EEBC843A230D42A2007977E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEBC8439230D42A2007977E5 /* Assets.xcassets */; };
 		EEBC843D230D42A2007977E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBC843B230D42A2007977E5 /* LaunchScreen.storyboard */; };
@@ -57,18 +55,16 @@
 		69B8C9DBFAC93F1A81426858 /* Pods-WGdotorgTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGdotorgTests.debug.xcconfig"; path = "Target Support Files/Pods-WGdotorgTests/Pods-WGdotorgTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E2954A8732C9432BD668C82D /* Pods_WGdotorg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGdotorg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40FE249C82C66A2EB013AD9 /* Pods-WGdotorg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGdotorg.release.xcconfig"; path = "Target Support Files/Pods-WGdotorg/Pods-WGdotorg.release.xcconfig"; sourceTree = "<group>"; };
-		EE0E5F7F231330E10061CD00 /* ShoppingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCell.swift; sourceTree = "<group>"; };
-		EE0E5F83231332880061CD00 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 		EE4EE35E23115D080075D5DE /* CreateJoinGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJoinGroupViewController.swift; sourceTree = "<group>"; };
 		EE4EE36223115F1B0075D5DE /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		EE60E6DB230F303400453572 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EE60E6DD230F546E00453572 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
-		EE60E6E3230F558C00453572 /* PasswordValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidationResult.swift; sourceTree = "<group>"; };
+		EE897E5B231463BA0048C895 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		EE897E5F231464AD0048C895 /* ShoppingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCell.swift; sourceTree = "<group>"; };
 		EEB39261230DB50300ABE09C /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		EEBC842D230D42A0007977E5 /* WGdotorg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGdotorg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBC8430230D42A1007977E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEBC8432230D42A1007977E5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		EEBC8434230D42A1007977E5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EEBC8437230D42A1007977E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEBC8439230D42A2007977E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEBC843C230D42A2007977E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -134,6 +130,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE8432A82313462200147B6F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		EEBC8424230D42A0007977E5 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +146,7 @@
 				EEBC842E230D42A0007977E5 /* Products */,
 				0BA97440836759171AA879F1 /* Pods */,
 				857B7E896D4E8DB2B1D75373 /* Frameworks */,
+				EE8432A82313462200147B6F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,16 +163,15 @@
 		EEBC842F230D42A0007977E5 /* WGdotorg */ = {
 			isa = PBXGroup;
 			children = (
+				EE897E5F231464AD0048C895 /* ShoppingListCell.swift */,
+				EE897E5B231463BA0048C895 /* ShoppingListViewController.swift */,
 				EE4EE35E23115D080075D5DE /* CreateJoinGroupViewController.swift */,
 				EE4EE36223115F1B0075D5DE /* CreateGroupViewController.swift */,
-				EE60E6E3230F558C00453572 /* PasswordValidationResult.swift */,
 				EEBC8460230D43B0007977E5 /* GoogleService-Info.plist */,
 				EEBC8430230D42A1007977E5 /* AppDelegate.swift */,
 				EEBC8432230D42A1007977E5 /* FirstViewController.swift */,
 				EEC00C1D230D46AF00807674 /* LoginViewController.swift */,
 				EEB39261230DB50300ABE09C /* CreateUserViewController.swift */,
-				EEBC8434230D42A1007977E5 /* SecondViewController.swift */,
-				EE0E5F83231332880061CD00 /* ShoppingListTableViewController.swift */,
 				EEBC8436230D42A1007977E5 /* Main.storyboard */,
 				EE60E6DB230F303400453572 /* WelcomeViewController.swift */,
 				EE60E6DD230F546E00453572 /* LoginResult.swift */,
@@ -419,18 +422,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE897E5C231463BA0048C895 /* ShoppingListViewController.swift in Sources */,
 				EE4EE36323115F1B0075D5DE /* CreateGroupViewController.swift in Sources */,
 				EE4EE35F23115D080075D5DE /* CreateJoinGroupViewController.swift in Sources */,
 				EEC00C1E230D46AF00807674 /* LoginViewController.swift in Sources */,
 				EE60E6DE230F546E00453572 /* LoginResult.swift in Sources */,
-				EE0E5F80231330E10061CD00 /* ShoppingListCell.swift in Sources */,
 				EEB39262230DB50300ABE09C /* CreateUserViewController.swift in Sources */,
-				EEBC8435230D42A1007977E5 /* SecondViewController.swift in Sources */,
 				EE60E6DC230F303400453572 /* WelcomeViewController.swift in Sources */,
 				EEBC8431230D42A1007977E5 /* AppDelegate.swift in Sources */,
-				EE60E6E4230F558C00453572 /* PasswordValidationResult.swift in Sources */,
+				EE897E60231464AD0048C895 /* ShoppingListCell.swift in Sources */,
 				EEBC8433230D42A1007977E5 /* FirstViewController.swift in Sources */,
-				EE0E5F84231332880061CD00 /* ShoppingListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -64,20 +64,21 @@ class CreateUserViewController: UIViewController {
     
     // Checks if all fields are filled out and marks the ones that are not
     func allFieldsFilledOut() -> Bool {
-        return (emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            firstNameFIeld.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordFieldOne.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordFieldTwo.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "")
+        return ((emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "") &&
+            (firstNameFIeld.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "") &&
+            (lastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "") &&
+            (passwordFieldOne.text?.trimmingCharacters(in: .whitespacesAndNewlines) != "") &&
+            (passwordFieldTwo.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""))
         }
 
 
     // Checks if passwords are valid
     func passWordsAreValid() -> Bool {
-        let password: String = passwordFieldOne.text!
-        let passwordRegex = "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}"
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-        return passwordTest.evaluate(with: password)
+        return true
+//        let password: String = passwordFieldOne.text!
+//        let passwordRegex = "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}"
+//        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+//        return passwordTest.evaluate(with: password)
     }
     
     // Checks if email address is valid
@@ -96,23 +97,27 @@ class CreateUserViewController: UIViewController {
                 self.errorMessageLabel.text! = "Something went wrong. Please try again later."
                 return
             }
+            
             // User succesfully logged in
+            
+            // Create user reference in firestore database
             let db = Firestore.firestore()
-            var ref: DocumentReference? = nil
-            ref = db.collection("users").addDocument(data: [
+            let uid = (Auth.auth().currentUser?.uid as Any) as! String
+            let data: [String : Any] = [
                 "age": 0,
                 "email": email,
                 "firstName": self.firstNameFIeld.text!,
                 "lastName": self.lastNameField.text!,
                 "sex": "blank",
-                "uid": Auth.auth().currentUser?.uid,
-                "group": "None"
-                ])
+                "uid": uid,
+                "group": ""
+                ]
+            db.collection("users").document(uid).setData(data)
         }
         
         // Login was succseful
         
-        performSegue(withIdentifier: "fromCreateUserToHome", sender: self)
+        performSegue(withIdentifier: "fromCreateUserToGroup", sender: self)
     }
     
     override func viewDidLoad() {

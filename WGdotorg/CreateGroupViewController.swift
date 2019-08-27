@@ -16,49 +16,34 @@ class CreateGroupViewController: UIViewController {
     
     static var db = Firestore.firestore()
     
+    
     // Create user friendly UUID and check in database if it already exists
     func createUuid() -> String {
-//        var again = false
-//        var uuid = UUID().uuidString
-//        uuid = uuid.components(separatedBy: "-")[0]
-//        uuid = "test"
-        var test = [QueryDocumentSnapshot]()
+        
+        let newUuid = UUID().uuidString.components(separatedBy: "-")[0]
+        var uuids = [String]()
+        
         CreateGroupViewController.db.collection("groups").getDocuments() {
             (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    test += [document]
+                    let docUuid = document.data()["uid"] as! String
+                    uuids += [docUuid]
                 }
             }
         }
-        return ""
-    }
         
-//        CreateGroupViewController.db.collection("groups").getDocuments() { (querySnapshots, err) in
-//            if let _ = err {
-////                self.errorMessage.text = "An error occured."
-//            } else {
-//                // Check every document if uid already exisits
-//                for doc in querySnapshots!.documents {
-//                    // Get the uid from current group and cast it to string
-//                    let docUid = doc.data()["uid"] as! String
-//                    // If uids are equal start over
-//                    if uuid == docUid {
-//                        again = true
-//                    }
-//                }
-//            }
-//        }
+        // Check if uuid has been there before, if yes add "!"
+        for uuid in uuids {
+            if uuid == newUuid {
+                return String(newUuid.dropLast() + "!")
+            }
+        }
+        return newUuid
+    }
     
-//        if again {
-//            return uuid
-//        }
-//        else {
-//            return createUuid()
-//        }
-//    }
 
     @IBAction func didTapCreateGroup(_ sender: UIButton) {
         
@@ -77,13 +62,22 @@ class CreateGroupViewController: UIViewController {
         // Create db reference
         var ref: DocumentReference? = nil
         
+        // Create group uuid
         let uuid = createUuid()
         
+        // Create group
         ref = CreateGroupViewController.db.collection("groups").addDocument(data: [
             "name": groupNameTextField.text!,
             "uid": uuid
             ])
+        
+        var l = 0
+        
+        // assign group to user
+//        CreateGroupViewController.db.collection("users").
+        
 
+        performSegue(withIdentifier: "fromCreateGroupToHome", sender: self)
     }
     
     override func viewDidLoad() {
