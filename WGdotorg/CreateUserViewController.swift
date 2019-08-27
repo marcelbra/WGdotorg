@@ -71,7 +71,6 @@ class CreateUserViewController: UIViewController {
             (passwordFieldTwo.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""))
         }
 
-
     // Checks if passwords are valid
     func passWordsAreValid() -> Bool {
         return true
@@ -92,18 +91,19 @@ class CreateUserViewController: UIViewController {
     // Creates the user in the authentication list
     // Creates user data in firestore
     func createUser(email: String, password: String) {
+        
+        let db = Firestore.firestore()
+        
+        // Create user
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
              guard error == nil, user != nil else {
                 self.errorMessageLabel.text! = "Something went wrong. Please try again later."
                 return
-            }
-            
-            // User succesfully logged in
-            
-            // Create user reference in firestore database
-            let db = Firestore.firestore()
-            let uid = (Auth.auth().currentUser?.uid as Any) as! String
-            let data: [String : Any] = [
+            } // User created and loged in
+    
+            // Create data
+            let uid = Auth.auth().currentUser?.uid as Any as! String
+            let data: [String: Any] = [
                 "age": 0,
                 "email": email,
                 "firstName": self.firstNameFIeld.text!,
@@ -112,17 +112,17 @@ class CreateUserViewController: UIViewController {
                 "uid": uid,
                 "group": ""
                 ]
-            db.collection("users").document(uid).setData(data)
+            
+            // Add user data to db
+            db.collection("users").document(uid).setData(data) { err in
+                if err == nil {
+                    self.performSegue(withIdentifier: "fromCreateUserToGroup", sender: self)
+                }
+            }
         }
-        
-        // Login was succseful
-        
-        performSegue(withIdentifier: "fromCreateUserToGroup", sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
 }

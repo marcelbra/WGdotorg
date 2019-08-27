@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-//@objc(EmailViewController)
+//@objc(LoginViewController)
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var errorMessage: UILabel!
@@ -21,63 +21,56 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-
-    
     @IBAction func didTapEmailLogin(_ sender: UIButton) {
-
-        // Database connection
-        let db = Firestore.firestore()
 
         // Check if empty
         guard emailField.text != nil, passwordField.text != nil else {
+            self.errorMessage.text = "Fields can't be empty."
             return
         }
 
-        // Try to log in
         let email = emailField.text!
         let password = passwordField.text!
+
+        loginAsync(with: email, with: password) { (loginSuccesful) in
+            if loginSuccesful {
+                self.userHasGroupAsync(completionHandler: { (hasGroup) in
+                    if hasGroup {
+                        self.performSegue(withIdentifier: "fromLoginToHome", sender: self)
+                    } else {
+                        self.performSegue(withIdentifier: "fromLoginToCreateJoinGroup", sender: self)
+                    }
+                })
+            }
+        }
+    }
+    
+    func loginAsync(with email: String, with password: String, completionHandler: @escaping (Bool) -> ()) {
+        var succesful = true
         Auth.auth().signIn(withEmail: email, password: password) {
             (user, error) in
             guard error == nil, user != nil else {
                 // There was an error.
-                self.errorMessage.text = "Email/password incorrect"
+                self.errorMessage.text = "Email/password incorrect."
+                succesful = false
                 return
             }
-            
-            let userUid = Auth.auth().currentUser?.uid
-            db.collection("users").document(userUid!).getDocument {
-                (document, error) in
-                if let document = document, document.exists {
-                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                    print("Document data: \(dataDescription)")
-                } else {
-                    print("Document does not exist")
-                }
-            }
-            
-            self.performSegue(withIdentifier: "fromLoginToCreateJoinGroup", sender: self)
-
-            self.performSegue(withIdentifier: "fromLoginToHome", sender: self)
+            completionHandler(succesful)
         }
     }
     
+    func userHasGroupAsync(completionHandler: @escaping (Bool) -> ()) {
+        var hasGroup = false
+        let db = Firestore.firestore()
+        let userUid = Auth.auth().currentUser?.uid
+        let docRef = db.collection("users").document(userUid!)
+        docRef.getDocument { (document, _) in
+            if let document = document, document.exists {
+                let data: [String: Any] = document.data()!
+                let group = data["group"] as! String
+                if group != "" { hasGroup = true }
+            }
+            completionHandler(hasGroup)
+        }
+    }
 }
-
-//        showSpinner {
-//            // [START headless_email_auth]
-//            Auth.auth().signIn(withEmail: email, password: password) {
-//                [weak self] user, error in
-//                guard let strongSelf = self else { return }
-//                // [START_EXCLUDE]
-//                strongSelf.hideSpinner {
-//                    if let error = error {
-//                        strongSelf.showMessagePrompt(error.localizedDescription)
-//                        return
-//                    }
-//                    strongSelf.navigationController?.popViewController(animated: true)
-//                }
-//                // [END_EXCLUDE]
-//            }
-//            // [END headless_email_auth]
-//        }
-//    }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jww-R7-Ffo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6m6-td-Fh8">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -323,7 +323,7 @@
                         <outlet property="errorMessage" destination="Mcm-uB-aN5" id="Gvq-Y9-CYI"/>
                         <outlet property="passwordField" destination="UZ1-Lh-kLd" id="sdD-Ty-nhW"/>
                         <segue destination="49e-Tb-3d3" kind="presentation" identifier="fromLoginToHome" id="dlY-Hm-nJF"/>
-                        <segue destination="Gu5-rd-FWs" kind="presentation" id="3Tf-dy-Pqe"/>
+                        <segue destination="Gu5-rd-FWs" kind="presentation" identifier="fromLoginToCreateJoinGroup" id="3Tf-dy-Pqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chO-Wu-fhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -416,18 +416,26 @@
                                     <action selector="didTapCreateGroup:" destination="k4n-7v-gPI" eventType="touchUpInside" id="Ul7-F5-Uqt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgI-ZL-gg0">
+                                <rect key="frame" x="87" y="575" width="198" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zUf-6z-fRG"/>
                     </view>
                     <connections>
+                        <outlet property="errorMessage" destination="NgI-ZL-gg0" id="LcN-yp-ELQ"/>
                         <outlet property="groupNameTextField" destination="fo0-ha-whB" id="dKJ-du-DtV"/>
                         <segue destination="49e-Tb-3d3" kind="presentation" identifier="fromCreateGroupToHome" id="MA6-6Q-2xy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ca4-WL-crd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="-644"/>
+            <point key="canvasLocation" x="2153.6231884057975" y="-644.19642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GXw-JF-nCL">
@@ -521,7 +529,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dlY-Hm-nJF"/>
+        <segue reference="MA6-6Q-2xy"/>
         <segue reference="3Tf-dy-Pqe"/>
     </inferredMetricsTieBreakers>
 </document>
