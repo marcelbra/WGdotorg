@@ -19,32 +19,46 @@ class ShoppingListViewController: UIViewController {
         
         // Create alert controller
         let alertController = UIAlertController(title: "Add New Name", message: nil, preferredStyle: .alert)
-        // Create cancel action
+        
+        // Cancel action
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        // Create save action
+        
+        // Save action
         alertController.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action) in
             if let itemName = alertController.textFields?.first?.text {
                 self.saveItemToDB(with: itemName)
                 self.updateTableView(with: itemName)
             }
         }))
+        
         // Create text field
         alertController.addTextField { (textField) in
             textField.placeholder = "Enter an item"
         }
+        
         present(alertController, animated: true, completion: nil)
     }
     
     func saveItemToDB(with itemName: String) {
         let db = Firestore.firestore()
         if let _ = Auth.auth().currentUser {
-            let groupId = HomeViewController.groupId
-            // Get subcolletion
+            let groupId = "A11C1F3A"//HomeViewController.groupId
             let groupRef = db.collection("groups").document(groupId).collection("ShoppingList" + groupId)
-            let data: [String: Any] = [
-                "name" : itemName
-            ]
-            groupRef.document(itemName).setData(data)
+            
+            // Check if the item already exists
+            groupRef.document(itemName).getDocument { (document, err) in
+                // If it does exist, give alert
+                if let document = document, document.exists {
+                    let alert = UIAlertController(title: "Item already exists!", message: "Please add an item with a different name.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                } else { // else add it to db
+                    let data: [String: Any] = [
+                        "name" : itemName
+                    ]
+                    groupRef.document(itemName).setData(data)
+                }
+            }
         }
     }
     
@@ -57,7 +71,7 @@ class ShoppingListViewController: UIViewController {
     
     func setItems(completionHandler: @escaping ([String]) -> ()) {
         let db = Firestore.firestore()
-        let groupId = HomeViewController.groupId
+        let groupId = "A11C1F3A"//HomeViewController.groupId
         let itemsRef = db.collection("groups").document(groupId).collection("ShoppingList" + groupId)
         itemsRef.getDocuments { (querySnapshot, err) in
             guard err == nil, querySnapshot != nil else {
