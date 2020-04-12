@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "86EAF099-79B1-4ACF-AC9A-51062E67B63C"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "5699848E-D03D-424F-B192-578F0CE6F521"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -22,6 +24,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "77A01512-6ABE-48EC-AD2F-481EC998CA7D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -38,6 +41,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "B095F69C-1B9D-46FB-9200-34D88B6B7B6F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -51,34 +55,34 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "B095F69C-1B9D-46FB-9200-34D88B6B7B6F - ab3efc7f6ee2b618"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "WGdotorg.CreateUserViewController.createUser(email: Swift.String, password: Swift.String) -&gt; ()"
                   moduleName = "WGdotorg"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelbraasch/Desktop/WGdotorg/WGdotorg/CreateUserViewController.swift"
-                  timestampString = "588612116.659319"
+                  urlString = "file:///Users/marcelbraasch/Documents/Developer/WGdotorg/WGdotorg/CreateUserViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "50">
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "119">
                </Location>
                <Location
+                  uuid = "B095F69C-1B9D-46FB-9200-34D88B6B7B6F - c7c8f5209ea81ef5"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WGdotorg.CreateUserViewController.createUser(email: Swift.String, password: Swift.String) -&gt; ()"
                   moduleName = "WGdotorg"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelbraasch/Desktop/WGdotorg/WGdotorg/CreateUserViewController.swift"
-                  timestampString = "588612116.665555"
+                  urlString = "file:///Users/marcelbraasch/Documents/Developer/WGdotorg/WGdotorg/CreateUserViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "264">
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "295">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -86,6 +90,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "79DE9AFA-7D7A-4679-8685-D60138353D13"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -102,6 +107,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "26D94CD4-DDB6-4D90-B2DD-A15432E5218B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -118,6 +124,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "24D7A09C-086A-4A3C-8B83-A35D8CD25401"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -134,6 +141,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "D22FE985-31A5-48C1-AD84-5FADE2C1034C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -141,8 +149,8 @@
             timestampString = "589137285.841279"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "setItems(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -150,6 +158,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "0406CF01-F6A9-4101-A1F1-DA5C1698601C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -157,8 +166,8 @@
             timestampString = "589137285.8413219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -166,15 +175,143 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "9428000E-3F6A-49B4-810F-144EDFFE95DC"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WGdotorg/ShoppingListViewController.swift"
-            timestampString = "589137285.841357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "addItem(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AB52664-D2C7-44EC-807A-BE7E2FDC60E7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WGdotorg/ShoppingListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "setItems(completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5AB52664-D2C7-44EC-807A-BE7E2FDC60E7 - 7bdfda4bbf390aec"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WGdotorg.ShoppingListViewController.setItems(completionHandler: (Swift.Array&lt;WGdotorg.ShoppingItem&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WGdotorg"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelbraasch/Documents/Developer/WGdotorg/WGdotorg/ShoppingListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "618">
+               </Location>
+               <Location
+                  uuid = "5AB52664-D2C7-44EC-807A-BE7E2FDC60E7 - a3972b2168c214ae"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WGdotorg.ShoppingListViewController.setItems(completionHandler: (Swift.Array&lt;WGdotorg.ShoppingItem&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WGdotorg"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelbraasch/Documents/Developer/WGdotorg/WGdotorg/ShoppingListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "282">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBAD0401-1F64-4335-88CE-D4B0166B8AC8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WGdotorg/ShoppingListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "800CBD70-C8C7-4AA6-BB11-B2AF8B82A8B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WGdotorg/ShoppingListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "800CBD70-C8C7-4AA6-BB11-B2AF8B82A8B4 - 5158bb68a6fe755c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WGdotorg.ShoppingListViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "WGdotorg"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelbraasch/Documents/Developer/WGdotorg/WGdotorg/ShoppingListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "664">
+               </Location>
+               <Location
+                  uuid = "800CBD70-C8C7-4AA6-BB11-B2AF8B82A8B4 - f71baa15844fe271"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;WGdotorg.ShoppingItem&gt;) -&gt; () in WGdotorg.ShoppingListViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "WGdotorg"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelbraasch/Documents/Developer/WGdotorg/WGdotorg/ShoppingListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "154">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "524FDBA0-775A-4989-AF44-BF9DBF4806A1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WGdotorg/ShoppingListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "setItems(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -182,48 +319,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "94577642-11FC-4E7E-823B-65B759E2EB78"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WGdotorg/ShoppingListViewController.swift"
-            timestampString = "589137285.84139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "setItems(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WGdotorg/ShoppingListViewController.swift"
-            timestampString = "589137285.841424"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "setItems(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WGdotorg/ShoppingListViewController.swift"
-            timestampString = "589137285.841459"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "saveItemToDB(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

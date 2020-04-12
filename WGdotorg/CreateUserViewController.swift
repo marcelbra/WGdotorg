@@ -82,10 +82,11 @@ class CreateUserViewController: UIViewController {
     
     // Checks if email address is valid
     func emailAddressValid() -> Bool {
-        let emailAddress = emailField.text!
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return emailTest.evaluate(with: emailAddress)
+        return true
+//        let emailAddress = emailField.text!
+//        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+//        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+//        return emailTest.evaluate(with: emailAddress)
     }
 
     // Creates the user in the authentication list

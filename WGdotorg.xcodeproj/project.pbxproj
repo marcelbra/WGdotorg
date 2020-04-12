@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		52D972224D250502180F80AA /* Pods_WGdotorgUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01913D9DA237C218A58852F7 /* Pods_WGdotorgUITests.framework */; };
+		EE43ACA624423AE50090276B /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43ACA524423AE50090276B /* DateCell.swift */; };
+		EE43ACA824423B450090276B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43ACA724423B450090276B /* CalendarViewController.swift */; };
 		EE4D598323159DE7007A8D47 /* JoinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D598223159DE7007A8D47 /* JoinGroupViewController.swift */; };
 		EE4D59852315ACFC007A8D47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D59842315ACFC007A8D47 /* HomeViewController.swift */; };
 		EE4EE35F23115D080075D5DE /* CreateJoinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EE35E23115D080075D5DE /* CreateJoinGroupViewController.swift */; };
 		EE4EE36323115F1B0075D5DE /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EE36223115F1B0075D5DE /* CreateGroupViewController.swift */; };
 		EE60E6DC230F303400453572 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60E6DB230F303400453572 /* WelcomeViewController.swift */; };
 		EE60E6DE230F546E00453572 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60E6DD230F546E00453572 /* LoginResult.swift */; };
+		EE77AC87243E1A8000CF4759 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE77AC86243E1A8000CF4759 /* GoogleService-Info.plist */; };
 		EE897E5C231463BA0048C895 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE897E5B231463BA0048C895 /* ShoppingListViewController.swift */; };
 		EE897E60231464AD0048C895 /* ShoppingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE897E5F231464AD0048C895 /* ShoppingListCell.swift */; };
+		EE9C75E52440E09F0060BB4D /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C75E42440E09F0060BB4D /* ShoppingItem.swift */; };
 		EEB39262230DB50300ABE09C /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB39261230DB50300ABE09C /* CreateUserViewController.swift */; };
 		EEBC8431230D42A1007977E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBC8430230D42A1007977E5 /* AppDelegate.swift */; };
 		EEBC8433230D42A1007977E5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBC8432230D42A1007977E5 /* FirstViewController.swift */; };
@@ -24,8 +28,8 @@
 		EEBC843D230D42A2007977E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBC843B230D42A2007977E5 /* LaunchScreen.storyboard */; };
 		EEBC8448230D42A2007977E5 /* WGdotorgTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBC8447230D42A2007977E5 /* WGdotorgTests.swift */; };
 		EEBC8453230D42A2007977E5 /* WGdotorgUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBC8452230D42A2007977E5 /* WGdotorgUITests.swift */; };
-		EEBC8461230D43B0007977E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEBC8460230D43B0007977E5 /* GoogleService-Info.plist */; };
 		EEC00C1E230D46AF00807674 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC00C1D230D46AF00807674 /* LoginViewController.swift */; };
+		EEEDA0B42442717600A81746 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDA0B32442717600A81746 /* DateHeader.swift */; };
 		F2EB4BCAD9E1A3DFD87CA87D /* Pods_WGdotorgTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29CB839C49F31B4E34020E /* Pods_WGdotorgTests.framework */; };
 		FED7DAD3921E350DE93009DF /* Pods_WGdotorg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2954A8732C9432BD668C82D /* Pods_WGdotorg.framework */; };
 /* End PBXBuildFile section */
@@ -57,14 +61,18 @@
 		69B8C9DBFAC93F1A81426858 /* Pods-WGdotorgTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGdotorgTests.debug.xcconfig"; path = "Target Support Files/Pods-WGdotorgTests/Pods-WGdotorgTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E2954A8732C9432BD668C82D /* Pods_WGdotorg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGdotorg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40FE249C82C66A2EB013AD9 /* Pods-WGdotorg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGdotorg.release.xcconfig"; path = "Target Support Files/Pods-WGdotorg/Pods-WGdotorg.release.xcconfig"; sourceTree = "<group>"; };
+		EE43ACA524423AE50090276B /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		EE43ACA724423B450090276B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		EE4D598223159DE7007A8D47 /* JoinGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupViewController.swift; sourceTree = "<group>"; };
 		EE4D59842315ACFC007A8D47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE4EE35E23115D080075D5DE /* CreateJoinGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJoinGroupViewController.swift; sourceTree = "<group>"; };
 		EE4EE36223115F1B0075D5DE /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		EE60E6DB230F303400453572 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EE60E6DD230F546E00453572 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		EE77AC86243E1A8000CF4759 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE897E5B231463BA0048C895 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		EE897E5F231464AD0048C895 /* ShoppingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCell.swift; sourceTree = "<group>"; };
+		EE9C75E42440E09F0060BB4D /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		EEB39261230DB50300ABE09C /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		EEBC842D230D42A0007977E5 /* WGdotorg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGdotorg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBC8430230D42A1007977E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,8 +87,8 @@
 		EEBC844E230D42A2007977E5 /* WGdotorgUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WGdotorgUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBC8452230D42A2007977E5 /* WGdotorgUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGdotorgUITests.swift; sourceTree = "<group>"; };
 		EEBC8454230D42A2007977E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEBC8460230D43B0007977E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEC00C1D230D46AF00807674 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EEEDA0B32442717600A81746 /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,22 +176,26 @@
 			isa = PBXGroup;
 			children = (
 				EE4D598223159DE7007A8D47 /* JoinGroupViewController.swift */,
+				EEEDA0B32442717600A81746 /* DateHeader.swift */,
 				EE4D59842315ACFC007A8D47 /* HomeViewController.swift */,
 				EE897E5F231464AD0048C895 /* ShoppingListCell.swift */,
 				EE897E5B231463BA0048C895 /* ShoppingListViewController.swift */,
 				EE4EE35E23115D080075D5DE /* CreateJoinGroupViewController.swift */,
 				EE4EE36223115F1B0075D5DE /* CreateGroupViewController.swift */,
-				EEBC8460230D43B0007977E5 /* GoogleService-Info.plist */,
+				EE77AC86243E1A8000CF4759 /* GoogleService-Info.plist */,
 				EEBC8430230D42A1007977E5 /* AppDelegate.swift */,
 				EEBC8432230D42A1007977E5 /* FirstViewController.swift */,
 				EEC00C1D230D46AF00807674 /* LoginViewController.swift */,
 				EEB39261230DB50300ABE09C /* CreateUserViewController.swift */,
 				EEBC8436230D42A1007977E5 /* Main.storyboard */,
+				EE9C75E42440E09F0060BB4D /* ShoppingItem.swift */,
 				EE60E6DB230F303400453572 /* WelcomeViewController.swift */,
 				EE60E6DD230F546E00453572 /* LoginResult.swift */,
 				EEBC8439230D42A2007977E5 /* Assets.xcassets */,
 				EEBC843B230D42A2007977E5 /* LaunchScreen.storyboard */,
 				EEBC843E230D42A2007977E5 /* Info.plist */,
+				EE43ACA524423AE50090276B /* DateCell.swift */,
+				EE43ACA724423B450090276B /* CalendarViewController.swift */,
 			);
 			path = WGdotorg;
 			sourceTree = "<group>";
@@ -315,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEBC843D230D42A2007977E5 /* LaunchScreen.storyboard in Resources */,
-				EEBC8461230D43B0007977E5 /* GoogleService-Info.plist in Resources */,
+				EE77AC87243E1A8000CF4759 /* GoogleService-Info.plist in Resources */,
 				EEBC843A230D42A2007977E5 /* Assets.xcassets in Resources */,
 				EEBC8438230D42A1007977E5 /* Main.storyboard in Resources */,
 			);
@@ -428,14 +440,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE43ACA824423B450090276B /* CalendarViewController.swift in Sources */,
 				EE897E5C231463BA0048C895 /* ShoppingListViewController.swift in Sources */,
+				EEEDA0B42442717600A81746 /* DateHeader.swift in Sources */,
 				EE4EE36323115F1B0075D5DE /* CreateGroupViewController.swift in Sources */,
+				EE9C75E52440E09F0060BB4D /* ShoppingItem.swift in Sources */,
 				EE4EE35F23115D080075D5DE /* CreateJoinGroupViewController.swift in Sources */,
 				EEC00C1E230D46AF00807674 /* LoginViewController.swift in Sources */,
 				EE60E6DE230F546E00453572 /* LoginResult.swift in Sources */,
 				EE4D598323159DE7007A8D47 /* JoinGroupViewController.swift in Sources */,
 				EEB39262230DB50300ABE09C /* CreateUserViewController.swift in Sources */,
 				EE60E6DC230F303400453572 /* WelcomeViewController.swift in Sources */,
+				EE43ACA624423AE50090276B /* DateCell.swift in Sources */,
 				EEBC8431230D42A1007977E5 /* AppDelegate.swift in Sources */,
 				EE897E60231464AD0048C895 /* ShoppingListCell.swift in Sources */,
 				EEBC8433230D42A1007977E5 /* FirstViewController.swift in Sources */,

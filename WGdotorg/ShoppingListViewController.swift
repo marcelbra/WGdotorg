@@ -11,9 +11,9 @@ import Firebase
 
 class ShoppingListViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    var items = [ShoppingItem]()
     
-    var items = [String]()
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         
@@ -26,8 +26,9 @@ class ShoppingListViewController: UIViewController {
         // Save action
         alertController.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action) in
             if let itemName = alertController.textFields?.first?.text {
-                self.saveItemToDB(with: itemName)
-                self.updateTableView(with: itemName)
+                let item = ShoppingItem(name: itemName, uuid: UUID().uuidString)
+                self.saveItemToDB(with: item)
+                self.updateTableView(with: item)
             }
         }))
         
@@ -39,54 +40,54 @@ class ShoppingListViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    func saveItemToDB(with itemName: String) {
+    func saveItemToDB(with item: ShoppingItem) {
         let db = Firestore.firestore()
         if let _ = Auth.auth().currentUser {
             let groupId = "A11C1F3A"//HomeViewController.groupId
             let groupRef = db.collection("groups").document(groupId).collection("ShoppingList" + groupId)
-            
-            // Check if the item already exists
-            groupRef.document(itemName).getDocument { (document, err) in
-                // If it does exist, give alert
-                if let document = document, document.exists {
-                    let alert = UIAlertController(title: "Item already exists!", message: "Please add an item with a different name.", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                } else { // else add it to db
-                    let data: [String: Any] = [
-                        "name" : itemName
-                    ]
-                    groupRef.document(itemName).setData(data)
-                }
-            }
+            // TODO: Implement serialize protocol to make this smoother
+            let data: [String: Any] = [
+                "name" : item.name,
+                "id" : item.uuid
+            ]
+            groupRef.document(item.uuid).setData(data)
         }
     }
     
-    func updateTableView(with newElement: String) {
-        items.append(newElement)
+    func updateTableView(with item: ShoppingItem) {
+        items.append(item)
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: items.count - 1, section: 0)], with: .automatic)
         tableView.endUpdates()
     }
     
-    func setItems(completionHandler: @escaping ([String]) -> ()) {
+    func setItems(completionHandler: @escaping ([ShoppingItem]) -> ()) {
+        
+        // TODO: Make this static/available everywhere
         let db = Firestore.firestore()
-        let groupId = "A11C1F3A"//HomeViewController.groupId
+        let groupId = "A11C1F3A" //HomeViewController.groupId //
         let itemsRef = db.collection("groups").document(groupId).collection("ShoppingList" + groupId)
-        itemsRef.getDocuments { (querySnapshot, err) in
+        
+        
+        itemsRef.getDocuments() { (querySnapshot, err) in
             guard err == nil, querySnapshot != nil else {
-                completionHandler([String]())
+                completionHandler([ShoppingItem]())
                 return
             }
-            var items = [String]()
+            
+            var items = [ShoppingItem]()
             for document in querySnapshot!.documents {
-                let item = document.data()["name"] as Any as! String
-                items.append(item)
+                // Serialize fetched data into ShoppingItem object
+                if let name = document.data()["name"],
+                   let id = document.data()["id"] {
+                    let item = ShoppingItem(name: name as! String, uuid: id as! String)
+                    items += [item]
+                }
             }
             completionHandler(items)
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -105,7 +106,37 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingListCell") as! ShoppingListCell
-        cell.setName(with: items[indexPath.row])
+        cell.setName(with: items[indexPath.row].name)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let db = Firestore.firestore()
+            let groupId = "A11C1F3A" //HomeViewController.groupId //
+            let itemsRef = db.collection("groups").document(groupId).collection("ShoppingList" + groupId)
+            
+            // Remove in db
+            let deletedItem = items[indexPath.row]
+            let documentId = deletedItem.uuid
+            itemsRef.document(documentId).delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+            }
+                
+            // Remove in internal state
+            self.items.remove(at: indexPath.row)
+            
+            // Remove in interface
+            self.tableView.beginUpdates()
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
+            }
+        }
     }
 }
