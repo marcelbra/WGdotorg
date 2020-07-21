@@ -11,6 +11,7 @@
 7. Open terminal and navigate to repo -> now run `$ pod install`
 8. Clean folders (`command + shift + K`) and build project (`command + B`)
 9. Run project (`command + R`) and see if everything compiles properly
+10. You might need to delete WGdotorg/Controllers/ConfigureTaskViewController
 
 ## Committing
 
