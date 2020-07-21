@@ -8,6 +8,8 @@
 
 import UIKit
 
+let x = "xxx"
+
 class CreateJoinGroupViewController: UIViewController {
 
     
